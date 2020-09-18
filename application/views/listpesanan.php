@@ -73,6 +73,7 @@
                                         <th>No Hp</th>
                                         <th>Produk</th>
                                         <th>Jumlah</th>
+                                        <th>Total Harga</th>
                                         <th>Keterangan</th>
                                     </tr>
                                 </thead>
@@ -87,6 +88,7 @@
                                         <td>" . $pemesanan[$i]->no_hp . "</td>
                                         <td>" . $pemesanan[$i]->id_produk . " - ". $pemesanan[$i]->nama_produk ."</td>
                                         <td>" . $pemesanan[$i]->jumlah . "</td>
+                                        <td>" . $pemesanan[$i]->jumlah*$pemesanan[$i]->harga . "</td>
                                         <td>" . $pemesanan[$i]->keterangan_pemesanan . "</td>
                                         </tr>
                                         ";
@@ -94,7 +96,7 @@
 
                                     ?>
                                     <tr>
-                                        <th colspan="7">Jumlah Pemesanan : <?= sizeof($pemesanan) ?></th>
+                                        <th colspan="8">Jumlah Pemesanan : <?= sizeof($pemesanan) ?></th>
                                     </tr>
                                 </tbody>
                             </table>
